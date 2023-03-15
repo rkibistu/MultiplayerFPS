@@ -8,9 +8,12 @@ using TMPro;
 public class ScoreScreenUI : MonoBehaviour
 {
     [SerializeField] private GameObject _listHolder;
-    [SerializeField] private GameObject _playerScoreItemPrefab;
+    [SerializeField] private GameObject _playerScoreItemPrefabBlue;
+    [SerializeField] private GameObject _playerScoreItemPrefabRed;
 
     [SerializeField] private TextMeshProUGUI _winnerText;
+
+    private GameObject _currentPlayerScoreItemPrefab;
 
     private void Start() {
 
@@ -36,8 +39,10 @@ public class ScoreScreenUI : MonoBehaviour
         foreach (var player in RoomPlayer.Players) {
 
 
-            var obj = Instantiate(_playerScoreItemPrefab, _listHolder.transform).GetComponent<PlayerScoreItemUI>();
+            var obj = Instantiate(_currentPlayerScoreItemPrefab, _listHolder.transform).GetComponent<PlayerScoreItemUI>();
             obj.Init(player.PlayerScore);
+
+            TogglePlayerScoreitemPrefab();
         }
     }
 
@@ -86,5 +91,15 @@ public class ScoreScreenUI : MonoBehaviour
 
         _winnerText.SetActive(true);
         _winnerText.text = "WINNER: " + playersScoreUI[1].GetComponent<PlayerScoreItemUI>().Nickname;
+    }
+
+    private void TogglePlayerScoreitemPrefab() {
+
+        if(_currentPlayerScoreItemPrefab == null) {
+            _currentPlayerScoreItemPrefab = _playerScoreItemPrefabBlue;
+            return;
+        }
+
+        _currentPlayerScoreItemPrefab = (_currentPlayerScoreItemPrefab == _playerScoreItemPrefabBlue) ? _playerScoreItemPrefabRed : _playerScoreItemPrefabBlue;
     }
 }
