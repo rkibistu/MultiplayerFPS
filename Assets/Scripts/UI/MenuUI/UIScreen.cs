@@ -17,6 +17,7 @@ public class UIScreen : MonoBehaviour {
     [SerializeField] private UIScreen previousScreen = null;
 
     public static UIScreen activeScreen;
+    
 
 
 

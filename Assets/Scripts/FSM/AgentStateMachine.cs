@@ -128,6 +128,7 @@ public class AgentStateMachine : NetworkKCCProcessor, IBeforeAllTicks {
     /// 2. Regular fixed update for agents
     /// </summary>
     public override sealed void FixedUpdateNetwork() {
+
         // Hitbox manager saves positions in forward frame so it is enough to interpolate in forward
         if (Runner.Stage == SimulationStages.Forward && IsProxy == true && _kcc.enabled == true) {
             // Interpolate proxies early before HitboxManager updates
@@ -252,6 +253,8 @@ public class AgentStateMachine : NetworkKCCProcessor, IBeforeAllTicks {
     /// 1. At this point new input is gathered so process movement part of it before updating positions in HitboxManager
     /// </summary>
     private void EarlyFixedUpdate() {
+
+
         // This method expects derived classes to make movement / look related calls to KCC.
         _currentState.ProcessEarlyFixedInput();
 
@@ -270,6 +273,7 @@ public class AgentStateMachine : NetworkKCCProcessor, IBeforeAllTicks {
     /// 3. Executed after all Agent and HitboxManager FixedUpdateNetwork() calls, process rest of player input (shooting, other non-movement related actions).
     /// </summary>
     private void LateFixedUpdate() {
+
         if (IsProxy == false) {
             _currentState.ProcessLateFixedInput();
         }
@@ -282,6 +286,8 @@ public class AgentStateMachine : NetworkKCCProcessor, IBeforeAllTicks {
     /// 4. Process input for render update. Only input and state authority will make changes, proxies are already interpolated.
     /// </summary>
     private void EarlyRender() {
+
+
         if (HasInputAuthority == true) {
             // This method expects derived classes to make movement / look related calls to KCC.
             _currentState.ProcessRenderInput();
@@ -301,6 +307,8 @@ public class AgentStateMachine : NetworkKCCProcessor, IBeforeAllTicks {
     /// 6. Executed after all Agent Render() calls
     /// </summary>
     private void LateRender() {
+
+
         // Here comes "late" render input processing of all other non-movement actions.
         // This gives you extra responsivity at the cost of maintaining extrapolation and reconcilliation.
         // Currently there are no specific actions extrapolated for render.

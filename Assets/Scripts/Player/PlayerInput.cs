@@ -153,6 +153,7 @@ public class PlayerInput : NetworkBehaviour, INetworkInput, IBeforeUpdate, IBefo
         if (Runner.ProvideInput == false || Context.Instance.SceneInput.IsLocked == false || InputBlocked == true)
             return;
 
+
         ProcessStandaloneInput();
     }
 
@@ -231,6 +232,10 @@ public class PlayerInput : NetworkBehaviour, INetworkInput, IBeforeUpdate, IBefo
     // aici se calculeaza cachedInput (tinand cont ca poate fi apelata de mai multe ori intr-un tick)
     // in functia OnInput se va seta cachedInput pentru a putea fi citita mai apoi de orice player apeland GetInput (asa se va popula fi fixedInput)
     private void ProcessStandaloneInput() {
+
+        if (Context.Instance.Gameplay.IsPlaying == false)
+            return;
+
         Vector2 moveDirection = Vector2.zero;
         Vector2 lookRotationDelta = new Vector2(-Input.GetAxisRaw("Mouse Y"), Input.GetAxisRaw("Mouse X"));
 

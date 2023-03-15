@@ -28,7 +28,7 @@ public abstract class Gameplay : NetworkBehaviour {
     public int _roundDuration;
     public GameTimer Timer => _timer;
 
-   
+    public bool IsPlaying { get; private set; }
 
     // PRIVATE MEMBERS
 
@@ -65,6 +65,11 @@ public abstract class Gameplay : NetworkBehaviour {
 
         // can be override by childs if diffrent gameplays need diffrent actions
         OnPlayerLeft(player);
+    }
+
+    public void EndRound() {
+
+        RoomPlayer.LocalRoomPlayer.RoundEnd(_activateUI);
     }
 
     // MONOBEHAVIOUR INTERFACE
@@ -120,6 +125,9 @@ public abstract class Gameplay : NetworkBehaviour {
         // There are destroyed gameobjects that exist in cache when we spawn scenes. We don't want them
         Context.Instance.ObjectCache.ClearAll();
 
+        //accept input
+        IsPlaying = true;
+
         OnSpawned();
     }
 
@@ -159,6 +167,15 @@ public abstract class Gameplay : NetworkBehaviour {
 
         int index = Random.Range(0, _spawnPoints.Length);
         return _spawnPoints[index].transform;
+    }
+
+    protected void PlayEndOfRoundAnimation() {
+
+        IsPlaying = false;
+        _activateUI.Dezactivate();
+
+        //play animation
+        UIScreen.Focus(InterfaceManager.Instance.resultScreen);
     }
 
     // PRIVATE METHODS

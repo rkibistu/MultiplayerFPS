@@ -50,7 +50,8 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _Players:
     _items: []
-  _roundDuration: 199
+  _roundDuration: 5
+  _reviveDelay: 3
 --- !u!114 &5711035792958713452
 MonoBehaviour:
   m_ObjectHideFlags: 0

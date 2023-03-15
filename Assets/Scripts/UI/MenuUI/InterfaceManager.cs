@@ -13,6 +13,7 @@ public class InterfaceManager : MonoBehaviour {
     public UIScreen lobbyMenu;
     public UIScreen dummyScreen;
     public UIScreen scoreScreen;
+    public UIScreen resultScreen;
 
     public static InterfaceManager Instance => Singleton<InterfaceManager>.Instance;
 
