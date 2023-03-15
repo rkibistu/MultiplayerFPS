@@ -1,0 +1,1180 @@
+fileFormatVersion: 2
+guid: 2accd060d067a8647a21e5c32666abba
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Borders purple-01_0
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 7106
+        width: 605
+        height: 1073
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ed686ec0c43d144abdc1963e76b78a
+      internalID: -1285013928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_1
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 7100
+        width: 609
+        height: 1079
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f83aa0918d95e4f9086a54686a5fd6
+      internalID: -1232178506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_2
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 7136
+        width: 1032
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc335fa408565145b148fd725354757
+      internalID: 845861845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_3
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 7090
+        width: 639
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73da32724096502489578eba83ee65b5
+      internalID: 401848295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_4
+      rect:
+        serializedVersion: 2
+        x: 4179
+        y: 7039
+        width: 634
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f40266623b53849be901e0a54207a3
+      internalID: -486594290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_5
+      rect:
+        serializedVersion: 2
+        x: 7963
+        y: 4109
+        width: 2263
+        height: 4014
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f7698e7cf479e4c84c6604845990de
+      internalID: 1409344035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_6
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 6602
+        width: 1028
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e05ac59527beb4c8e332ada0a290b4
+      internalID: -98124635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_7
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 5874
+        width: 610
+        height: 1073
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ecbec4ad134cb40a684cecf3703aae
+      internalID: -994484333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_8
+      rect:
+        serializedVersion: 2
+        x: 2281
+        y: 6546
+        width: 1017
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed73263b577a2240a95bf087186cda6
+      internalID: 652409226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_9
+      rect:
+        serializedVersion: 2
+        x: 3421
+        y: 6871
+        width: 573
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3dcd2b19d80ee4597212bf1f564f9d
+      internalID: -910822771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_10
+      rect:
+        serializedVersion: 2
+        x: 4189
+        y: 6816
+        width: 569
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9ee3425aaa14649bae27c656445d37
+      internalID: 3018084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_11
+      rect:
+        serializedVersion: 2
+        x: 3421
+        y: 6622
+        width: 630
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021a4e8e6abd5e94e8d395b70d905d1f
+      internalID: 726351120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_12
+      rect:
+        serializedVersion: 2
+        x: 4179
+        y: 6571
+        width: 633
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b45b2494dd2d8e4682c651a0f056b85
+      internalID: 1827891248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_13
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 6129
+        width: 1028
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0254b8994cbffd3449d1b3e009d50064
+      internalID: 1689416208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_14
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 5987
+        width: 457
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bfa390da37fc64799e6f973c700642
+      internalID: 456327225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_15
+      rect:
+        serializedVersion: 2
+        x: 3421
+        y: 6398
+        width: 573
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e22b44bfbddad342b18a232b792e550
+      internalID: -622047380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_16
+      rect:
+        serializedVersion: 2
+        x: 4194
+        y: 6347
+        width: 574
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d02fe10cad032488d21760a0bfa685
+      internalID: -1619339280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_17
+      rect:
+        serializedVersion: 2
+        x: 2953
+        y: 6179
+        width: 249
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe88249f5e833e4691e3951df436342
+      internalID: 1164016671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_18
+      rect:
+        serializedVersion: 2
+        x: 3421
+        y: 6156
+        width: 573
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515b9244e03115141a2de02f2259479e
+      internalID: 1752887976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_19
+      rect:
+        serializedVersion: 2
+        x: 4194
+        y: 6103
+        width: 574
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25d38c82b213094892bbf31381fca25
+      internalID: -1501078462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_20
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 5671
+        width: 1028
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aaa21a5d501cfa48ac181c8258fd8b0
+      internalID: 1026957921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_21
+      rect:
+        serializedVersion: 2
+        x: 2932
+        y: 6002
+        width: 290
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91580d6cc7e25d4995040fae112ac71
+      internalID: -913912952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_22
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 5650
+        width: 213
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb707821221d5534f854ef41a9415b54
+      internalID: -2002112609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_23
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 5650
+        width: 209
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5254c3e4b53124ab9854112f99f6f5
+      internalID: 2061644089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_24
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 5453
+        width: 234
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8827f59cd57e66f4da5441c2f7f27210
+      internalID: 1309456915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_25
+      rect:
+        serializedVersion: 2
+        x: 2353
+        y: 5453
+        width: 228
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffce0346949d64419ffdbefc87eac42
+      internalID: 2101965311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_26
+      rect:
+        serializedVersion: 2
+        x: 2668
+        y: 5615
+        width: 386
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eff0d96c5b6efd41b616836d5096918
+      internalID: -962740924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_27
+      rect:
+        serializedVersion: 2
+        x: 3115
+        y: 5503
+        width: 494
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4847ddea4cf4c8044a05fa821f7871db
+      internalID: 1922844917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_28
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 5503
+        width: 493
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f49b979f12463745a862edbf7ef013d
+      internalID: -388420967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_29
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 5152
+        width: 1028
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70832bed7c289a246b13f5bf97e44f6e
+      internalID: 1226312299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_30
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 5431
+        width: 212
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586a20c71da45244e9d67e57c493e582
+      internalID: -1508960710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_31
+      rect:
+        serializedVersion: 2
+        x: 2668
+        y: 5513
+        width: 386
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa855b9aefb5264591865ae656a66fe
+      internalID: -737841007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_32
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 5193
+        width: 209
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a449d8b5d0ba2a546b01fc5791ebf6f3
+      internalID: 584107176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_33
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 5193
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf4eb1d82bcec74d8a730d21837177e
+      internalID: 227833043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_34
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 5183
+        width: 234
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77c225da53e07640b5536d2ced6c331
+      internalID: 921306976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_35
+      rect:
+        serializedVersion: 2
+        x: 2353
+        y: 5183
+        width: 228
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae095ad83f0c3484a9ebb2a31d5bd445
+      internalID: 1049217866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_36
+      rect:
+        serializedVersion: 2
+        x: 2678
+        y: 5294
+        width: 315
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36eeda01b1feb248ad0e80a86511658
+      internalID: -410429461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_37
+      rect:
+        serializedVersion: 2
+        x: 3121
+        y: 4928
+        width: 498
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21689ead455b25e43ae8c6192cde336d
+      internalID: 994598403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_38
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 4928
+        width: 493
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842488dda503f0d4986a4b457a04aa20
+      internalID: -1639620416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_39
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 2513
+        width: 2263
+        height: 2264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fdb291a810677042bcae47f617054b1
+      internalID: 1734209943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_40
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2513
+        width: 4013
+        height: 2262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae98634a15b9d8949b1da08a0110525b
+      internalID: -1373651386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_41
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 4521
+        width: 259
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abe16c9cfb92834e8bfd2cf858f9cdc
+      internalID: 1072617097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_42
+      rect:
+        serializedVersion: 2
+        x: 9977
+        y: 4099
+        width: 259
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2b6a67c3a18cf418373fcc88d70369
+      internalID: -1408602745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_43
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 2512
+        width: 407
+        height: 411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b366b78e429d24541b350a4b557adbc6
+      internalID: -1667357565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_44
+      rect:
+        serializedVersion: 2
+        x: 7968
+        y: 38
+        width: 2263
+        height: 4014
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab42d090401b7e4b8d0fa5f572e3d0f
+      internalID: -2040037176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_45
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 104
+        width: 2264
+        height: 2264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fc15ec0ad383e4eb9a21eedf154ab0
+      internalID: -1521169054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders purple-01_46
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 104
+        width: 4013
+        height: 2264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b84037c88fc344d8b5d8dfbd31e568
+      internalID: -1322243742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Borders purple-01_27: 1922844917
+      Borders purple-01_29: 1226312299
+      Borders purple-01_46: -1322243742
+      Borders purple-01_17: 1164016671
+      Borders purple-01_10: 3018084
+      Borders purple-01_0: -1285013928
+      Borders purple-01_26: -962740924
+      Borders purple-01_3: 401848295
+      Borders purple-01_21: -913912952
+      Borders purple-01_20: 1026957921
+      Borders purple-01_8: 652409226
+      Borders purple-01_14: 456327225
+      Borders purple-01_28: -388420967
+      Borders purple-01_30: -1508960710
+      Borders purple-01_39: 1734209943
+      Borders purple-01_33: 227833043
+      Borders purple-01_34: 921306976
+      Borders purple-01_13: 1689416208
+      Borders purple-01_19: -1501078462
+      Borders purple-01_32: 584107176
+      Borders purple-01_38: -1639620416
+      Borders purple-01_44: -2040037176
+      Borders purple-01_7: -994484333
+      Borders purple-01_35: 1049217866
+      Borders purple-01_22: -2002112609
+      Borders purple-01_15: -622047380
+      Borders purple-01_31: -737841007
+      Borders purple-01_43: -1667357565
+      Borders purple-01_37: 994598403
+      Borders purple-01_6: -98124635
+      Borders purple-01_23: 2061644089
+      Borders purple-01_4: -486594290
+      Borders purple-01_5: 1409344035
+      Borders purple-01_9: -910822771
+      Borders purple-01_18: 1752887976
+      Borders purple-01_24: 1309456915
+      Borders purple-01_42: -1408602745
+      Borders purple-01_1: -1232178506
+      Borders purple-01_2: 845861845
+      Borders purple-01_40: -1373651386
+      Borders purple-01_16: -1619339280
+      Borders purple-01_45: -1521169054
+      Borders purple-01_11: 726351120
+      Borders purple-01_25: 2101965311
+      Borders purple-01_36: -410429461
+      Borders purple-01_12: 1827891248
+      Borders purple-01_41: 1072617097
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

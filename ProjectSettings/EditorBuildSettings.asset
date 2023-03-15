@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Launch.unity
+    guid: e886c96176329d147a1ec5c10dfb6b85
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 15f3e36ad5f241d499cefdcfb0ad590e
+  - enabled: 1
+    path: Assets/Scenes/AfterRoundMenu.unity
+    guid: f5a3d81714092774c904b956d97e6d50
+  - enabled: 1
+    path: Assets/Scenes/FirstMap.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/TestMap.unity
+    guid: b651fd0d07d44954dae0d1346ce9738c
+  - enabled: 1
+    path: Assets/Scenes/FySnow.unity
+    guid: 16d4e07a511d1ea42ac2bf2085ee9d74
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: 4faf6fd6f437d4e46bfb9472fab4e390
+  - enabled: 1
+    path: Assets/Scenes/Fabrica.unity
+    guid: eecc0999a49b44e4487118c787807aad
+  - enabled: 1
+    path: Assets/Scenes/Yard.unity
+    guid: a48fbb8c297216542ae4bcc3a80bd03f
+  - enabled: 1
+    path: Assets/Scenes/CityLightTest.unity
+    guid: 2b788696ae659bb4ba6fd6951f82bf05
+  m_configObjects: {}
