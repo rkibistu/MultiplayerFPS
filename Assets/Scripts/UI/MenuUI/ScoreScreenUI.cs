@@ -12,6 +12,7 @@ public class ScoreScreenUI : MonoBehaviour
     [SerializeField] private GameObject _playerScoreItemPrefabRed;
 
     [SerializeField] private TextMeshProUGUI _winnerText;
+    [SerializeField] private Transform _footer;
 
     private GameObject _currentPlayerScoreItemPrefab;
 
@@ -25,24 +26,37 @@ public class ScoreScreenUI : MonoBehaviour
 
         OrderScoresByKills();
     }
+    private void Update() {
 
+        if (Input.GetKeyDown(KeyCode.L)) {
+
+            ShowcaseWinner();
+        }
+    }
     private void PopulateScoreList() {
 
         //clear lsit
         _winnerText.SetActive(false);
-        foreach(Transform child in _listHolder.transform) {
-
-            Destroy(child);
-        }
+        ClearScoreList();
 
         //add all current players to list
         foreach (var player in RoomPlayer.Players) {
 
+            TogglePlayerScoreitemPrefab();
 
             var obj = Instantiate(_currentPlayerScoreItemPrefab, _listHolder.transform).GetComponent<PlayerScoreItemUI>();
             obj.Init(player.PlayerScore);
+        }
 
-            TogglePlayerScoreitemPrefab();
+        OrderScoresByKills();
+    }
+
+    private void ClearScoreList() {
+        if (_listHolder.transform.childCount > 2) {
+            for (int i = 1; i < _listHolder.transform.childCount - 1; i++) {
+
+                Destroy(_listHolder.transform.GetChild(i));
+            }
         }
     }
 
@@ -50,6 +64,7 @@ public class ScoreScreenUI : MonoBehaviour
     //  Functia ar trb mereu apelata cand afisam score screen-ul
     private void OrderScoresByKills() {
 
+       
         var playersScoreUI = _listHolder.GetComponentsInChildren<PlayerScoreItemUI>();
         
         for(int i=0;i<playersScoreUI.Length - 1; i++) {
@@ -64,19 +79,13 @@ public class ScoreScreenUI : MonoBehaviour
             }
         }
 
-        int index = 0;
+        int index = 1;
         foreach (var playerScore in playersScoreUI) {
 
             playerScore.transform.SetSiblingIndex(index++);
         }
-    }
 
-    private void Update() {
-
-        if (Input.GetKeyDown(KeyCode.L)) {
-
-            ShowcaseWinner();
-        }
+        _footer.SetAsLastSibling();
     }
 
     private void ShowcaseWinner() {

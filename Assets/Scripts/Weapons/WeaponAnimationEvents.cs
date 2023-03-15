@@ -155,7 +155,7 @@ public class WeaponAnimationEvents : MonoBehaviour {
     private void ReatacheMagazine() {
 
         _currentWeapon.Magazine.SetActive(true);
-        _magazineHand.SetActive(false);
+        _magazineHand?.SetActive(false);
     }
 
     private void MoveTo(Transform toMove, Transform dest) {
