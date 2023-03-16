@@ -1,9 +1,11 @@
 using Fusion;
+using Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using static RoomPlayer;
 
 /// <summary>
 /// 
@@ -31,6 +33,9 @@ public abstract class Gameplay : NetworkBehaviour {
     public bool IsPlaying { get; private set; }
 
     // PRIVATE MEMBERS
+    [SerializeField]
+    [Tooltip("Time to show Scoreboard at the end of the round before going back to lobby screen")]
+    private float _endScoreTableDuration = 3f;
 
     private SpawnPoint[] _spawnPoints;
 
@@ -67,9 +72,17 @@ public abstract class Gameplay : NetworkBehaviour {
         OnPlayerLeft(player);
     }
 
+    // This method should be called after end  of round animations to despawn gameplay objects and move to lobby screen
+    //   This method despawn gameplay objects, you have to despawn everything that depends to them for all players
+    //      Example: UI is going to have errors if you don't disable it on all players before calling this.
+    //      We use end of round animation as a way to let time to all players to despawn UI and other objects that are dependent 
     public void EndRound() {
 
-        RoomPlayer.LocalRoomPlayer.RoundEnd(_activateUI);
+        //show scoreboard
+        UIScreen.Focus(InterfaceManager.Instance.scoreScreen);
+
+        // despawn gameplay objects and go to lobby after some delay
+        StartCoroutine(GoBackToLobby_Coroutine());
     }
 
     // MONOBEHAVIOUR INTERFACE
@@ -169,17 +182,54 @@ public abstract class Gameplay : NetworkBehaviour {
         return _spawnPoints[index].transform;
     }
 
+    // This method is called by gameplay at the end of the match
+    //      it is going to play win/lose animation from GameResultScreenUI
+    //      acesta, dupa animatie, va apela EndRound din Gameplay -> despawn objects + go to lobby
     protected void PlayEndOfRoundAnimation() {
 
+        // Seteaza starea jucatorilor to lobby deoarece acum ne vom muta in scena d elobby dintre runde
+        foreach (var player in RoomPlayer.Players) {
+
+            player.GameState = EGameState.EndingRound;
+
+        }
+
+        //set gameplay state
         IsPlaying = false;
+
+        //dezactivate UI
         _activateUI.Dezactivate();
 
-        //play animation
+        //play win/lose animation
         UIScreen.Focus(InterfaceManager.Instance.resultScreen);
 
         //aici ne trebuie un if statement, sa stim pe care o bagam
         InterfaceManager.Instance.resultScreen.GetComponent<GameResultScreenUI>().PlayVictoryAnimation();
     }
+
+    private void DespawnGameplayAndGoToLobby() {
+
+        if (!HasStateAuthority)
+            return;
+
+        GameManager.Instance.DespawnGameplayObjects();
+
+        // Seteaza starea jucatorilor to lobby deoarece acum ne vom muta in scena d elobby dintre runde
+        foreach (var player in RoomPlayer.Players) {
+
+            player.GameState = EGameState.Lobby;
+        }
+
+        LevelManager.LoadTrack(ResourceManager.Instance.AfterRoundMenuScene);
+    }
+
+    private IEnumerator GoBackToLobby_Coroutine() {
+
+        yield return new WaitForSeconds(_endScoreTableDuration);
+        DespawnGameplayAndGoToLobby();
+    }
+
+   
 
     // PRIVATE METHODS
 

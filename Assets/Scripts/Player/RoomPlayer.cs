@@ -182,9 +182,9 @@ public class RoomPlayer : NetworkBehaviour {
 
         //Vrem sa Despawnam obiectele de gameplay doar daca otti playerii au termiant procesul de finalizare de runda
         foreach (var player in Players) {
-            
+
             if (player.GameState != EGameState.EndingRound) {
-                
+
                 if (player.Object.Id == info.Source) {
                     player.GameState = EGameState.EndingRound;
                 }
@@ -192,7 +192,7 @@ public class RoomPlayer : NetworkBehaviour {
                     return;
                 }
             }
-            
+
         }
 
         GameManager.Instance.DespawnGameplayObjects();

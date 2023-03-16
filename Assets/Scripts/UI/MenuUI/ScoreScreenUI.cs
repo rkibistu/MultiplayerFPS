@@ -15,8 +15,6 @@ public class ScoreScreenUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _winnerText;
     [SerializeField] private Transform _footer;
 
-    [SerializeField] private Button _backToLobbyButton;
-
     private GameObject _currentPlayerScoreItemPrefab;
     
 
@@ -109,17 +107,4 @@ public class ScoreScreenUI : MonoBehaviour
         _currentPlayerScoreItemPrefab = (_currentPlayerScoreItemPrefab == _playerScoreItemPrefabBlue) ? _playerScoreItemPrefabRed : _playerScoreItemPrefabBlue;
     }
 
-    public void SetBackToLobbyButtonActive(bool active = true) {
-
-        _backToLobbyButton.SetActive(active);
-    }
-
-    // method called when pressing the button at the end of the round, under the score screen
-    //  this method is going to despawn gameplay objects and go back to lobby
-    public void BackToLobby() {
-
-
-        Context.Instance.Gameplay.EndRound();
-        SetBackToLobbyButtonActive(false);
-    }
 }

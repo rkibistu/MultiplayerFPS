@@ -24,21 +24,20 @@ public class GameResultScreenUI : MonoBehaviour
     }
 
     // called by aniamtion events, after victory/lose animation
-    private void FocusToScoreScreen() {
+    private void EndRound() {
 
-        UIScreen.Focus(InterfaceManager.Instance.scoreScreen);
-        InterfaceManager.Instance.scoreScreen.GetComponent<ScoreScreenUI>().SetBackToLobbyButtonActive();
-
-        RoomPlayer.LocalRoomPlayer.Input.UnlockCursour();
+        Context.Instance.Gameplay.EndRound();
     }
 
-    public void PlayVictoryAnimation() {
+    public float PlayVictoryAnimation() {
 
         _animator.Play(_victoryAnim);
+        return _animator.GetCurrentAnimatorStateInfo(0).length;
     }
 
-    public void PlayLostAniamtion() {
+    public float PlayLostAniamtion() {
 
         _animator.Play(_lostAnim);
+        return _animator.GetCurrentAnimatorStateInfo(0).length;
     }
 }

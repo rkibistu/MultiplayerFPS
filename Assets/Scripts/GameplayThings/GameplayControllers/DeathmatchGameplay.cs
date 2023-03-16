@@ -80,13 +80,7 @@ public class DeathmatchGameplay : Gameplay {
 
         Debug.Log("Round ended, timer expired");
 
-        //Aici, inainte sa apelam functia RoundEnd din RoomPlayer
-        //      vrem sa aratam o aniamtie de UI pt victorie
-        //      dupa sa aratam scorul
-        //      si la o apasare de buton sa apelam functia urmatoare care te va scoate inapoi in lobby
         PlayEndOfRoundAnimation();
-
-        //RoomPlayer.LocalRoomPlayer.RoundEnd(_activateUI);
     }
 
 
