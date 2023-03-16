@@ -37,6 +37,7 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
     [SerializeField] private DisconnectUI _disconnectUI;
     [SerializeField] private GameObject _sessionPrefab;
 
+    //this tells us the state of the Runner
     public static ConnectionStatus ConnectionStatus = ConnectionStatus.Disconnected;
 
     private GameMode _gameMode;
@@ -70,7 +71,7 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
         if (_runner != null)
             LeaveSession();
 
-        
+
         GameObject go = Instantiate(_sessionPrefab);
 
         _runner = go.AddComponent<NetworkRunner>();
@@ -90,7 +91,7 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
             DisableClientSessionCreation = true
         });
 
-        
+
     }
 
     private void SetConnectionStatus(ConnectionStatus status) {
@@ -125,21 +126,21 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
     }
     public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) {
 
-        Debug.Log(runner.CurrentScene);
+
         if (_acceptConnectsSceneIndexes.Contains(runner.CurrentScene) || runner.CurrentScene == SceneRef.None) {
-  
+
             request.Accept();
         }
         else {
 
-            Debug.LogWarning($"Refused connection requested by {request.RemoteAddress}");
+            Debug.LogWarning($"Refused connection requested by {request.RemoteAddress}. runner.CurrentScene is not accepting new connections");
             request.Refuse();
         }
-            
-    } 
+
+    }
     public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason) {
         //Debug.Log($"Connect failed {reason.Summary()}");
-        
+
         LeaveSession();
         SetConnectionStatus(ConnectionStatus.Failed);
         (string status, string message) = ConnectFailedReasonToHuman(reason);
@@ -156,16 +157,20 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
             // Pentru fiecare player conectat, se creeza un RoomPlayer
             var roomPlayer = runner.Spawn(_roomPlayerPrefab, Vector3.zero, Quaternion.identity, player);
             roomPlayer.GameState = RoomPlayer.EGameState.Lobby;
+
+            if (runner.LocalPlayer == player)
+                SetConnectionStatus(ConnectionStatus.Connected);
         }
-        SetConnectionStatus(ConnectionStatus.Connected);
+
     }
 
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) {
         Debug.Log($"{player.PlayerId} disconnected.");
 
-        RoomPlayer.RemovePlayer(runner, player);
+        if (runner.LocalPlayer == player)
+            SetConnectionStatus(ConnectionStatus.Disconnected);
 
-        //SetConnectionStatus(ConnectionStatus);
+        RoomPlayer.RemovePlayer(runner, player);
     }
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) {
         Debug.Log($"OnShutdown {shutdownReason}");
