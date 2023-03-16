@@ -32,6 +32,8 @@ public abstract class PlayerMainState : BaseState {
 
         if (_agentStateMachine.HasInputAuthority)
             _agentStateMachine.Visual.SetVisibility(false);
+        else
+            _agentStateMachine.Visual.SetVisibility(true);
     }
 
     public override void OnDespawned() {

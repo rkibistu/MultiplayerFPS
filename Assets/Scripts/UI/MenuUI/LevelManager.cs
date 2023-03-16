@@ -35,7 +35,7 @@ namespace Managers {
         }
 
         protected override IEnumerator SwitchScene(SceneRef prevScene, SceneRef newScene, FinishedLoadingDelegate finished) {
-            Debug.Log($"Loading scene {newScene}");
+
 
             PreLoadScene(newScene);
 

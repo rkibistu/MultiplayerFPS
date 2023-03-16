@@ -122,8 +122,6 @@ public class AgentStateMachine : NetworkKCCProcessor, IBeforeAllTicks {
         AgentDespawned = null;
 
         _currentState.OnDespawned();
-
-        Debug.LogWarning("Agent despawned worked!");
     }
 
     /// <summary>
@@ -199,7 +197,6 @@ public class AgentStateMachine : NetworkKCCProcessor, IBeforeAllTicks {
         if (_kccHasPositionToSet == false)
             return;
 
-        Debug.Log("kcc set position: " + _kccPositionToSet);
         KCC.SetPosition(_kccPositionToSet);
         _kccHasPositionToSet = false;
     }

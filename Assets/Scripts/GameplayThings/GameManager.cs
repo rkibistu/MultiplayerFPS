@@ -90,8 +90,8 @@ public class GameManager : NetworkBehaviour
 
         RemovePlayersFromActiveGameplay();
         Context.Instance.Gameplay.Timer._onTiemrExpired = null;
-        DespawnGameplay();
         DespawnPlayersAgents();
+        DespawnGameplay();
     }
 
 
@@ -126,10 +126,6 @@ public class GameManager : NetworkBehaviour
     private void DespawnGameplay(bool changeToLobby = true) {
 
         Debug.Log("Despawn gameplay");
-        Debug.Log(Context.Instance.Runner == null);
-        Debug.Log(Context.Instance.Gameplay == null);
-        Debug.Log(Context.Instance.Gameplay.GetComponent<NetworkObject>() == null);
-
         Context.Instance.Runner.Despawn(Context.Instance.Gameplay.GetComponent<NetworkObject>());
 
         //LevelManager.LoadMenu();
@@ -138,7 +134,7 @@ public class GameManager : NetworkBehaviour
     // Spawn agents for every player. Called by GamesceneLoader when scene is ready to be played
     private void SpawnPlayersAgents() {
 
-        Debug.Log("Spawn players agents" + RoomPlayer.Players.Count);
+        Debug.Log("Spawn players agents. Count: " + RoomPlayer.Players.Count);
         foreach(var player in RoomPlayer.Players) {
 
             //player.SpawnAgent();
@@ -148,7 +144,7 @@ public class GameManager : NetworkBehaviour
     // Despawn agents for every player. 
     private void DespawnPlayersAgents() {
 
-        Debug.Log("Despawn players agents");
+        Debug.Log("Despawn players agents. Count: " + RoomPlayer.Players.Count);
         foreach(var player in RoomPlayer.Players) {
 
             DespawnPlayerAgent(player);
@@ -158,7 +154,7 @@ public class GameManager : NetworkBehaviour
     // Add players to active gameplay. Called by GamesceneLoader when scene is ready to be played
     private void AddPlayersToActiveGameplay() {
 
-        Debug.Log("Add players to gameplay " + RoomPlayer.Players.Count);
+        Debug.Log("Add players to gameplay. Count: " + RoomPlayer.Players.Count);
         foreach (var player in RoomPlayer.Players) {
 
             AddPlayerToActiveGameplay(player);
@@ -167,7 +163,7 @@ public class GameManager : NetworkBehaviour
     // Remove players from active gameplay.
     private void RemovePlayersFromActiveGameplay() {
 
-        Debug.Log("Remove players from gameplay " + RoomPlayer.Players.Count);
+        Debug.Log("Remove players from gameplay. Count: " + RoomPlayer.Players.Count);
         foreach (var player in RoomPlayer.Players) {
 
             RemovePlayerFromActiveGameplay(player);

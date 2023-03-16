@@ -15,7 +15,6 @@ public class GameplaySceneController : SceneController
         base.OnActivate();
 
         _killAnnouncer = GetComponentInChildren<KillAnnouncer>(true);
-        Debug.LogWarning(_killAnnouncer == null);
     }
 
     // PUBLIC METHODS

@@ -72,7 +72,6 @@ public class DeathmatchGameplay : Gameplay {
     private void SetPositionToSpawnPoint(AgentStateMachine agent) {
 
         Transform spawnPoint = RandomSpawnPoint();
-        Debug.Log("Move agent to: " + spawnPoint.position);
         agent.MoveTo(spawnPoint.position);
     }
 

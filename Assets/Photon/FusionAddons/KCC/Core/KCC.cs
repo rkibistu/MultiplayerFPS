@@ -597,7 +597,6 @@ namespace Fusion.KCC
 			}
 
 			SynchronizeTransform(data, true, false, false);
-			UnityEngine.Debug.LogWarning("se tkcc");
 		}
 
 		/// <summary>

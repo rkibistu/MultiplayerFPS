@@ -23,6 +23,7 @@ public class UICrosshair : UIWidget
     // PUBLIC METHODS
 
     public void HitPerformed(HitData hitData) {
+
         PlayEffect(_hitPerformedSound);
 
         DOTween.Kill(_hitPerformedGroup);
@@ -41,7 +42,7 @@ public class UICrosshair : UIWidget
         if (Time.frameCount == _lastSoundFrame)
             return; // Play only one sound per frame
 
-        SceneUI.PlaySound(setup);
+        SceneUI?.PlaySound(setup);
         _lastSoundFrame = Time.frameCount;
     }
 }

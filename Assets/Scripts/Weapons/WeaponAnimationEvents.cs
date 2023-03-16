@@ -59,14 +59,11 @@ public class WeaponAnimationEvents : MonoBehaviour {
 
             _reloadAudioEffects = _reloadAudioEffectsRoot.GetComponentsInChildren<AudioEffect>();
         }
-
-        
     }
 
     private void Start() {
-        Debug.Log("Start blaster");
+
         if (_currentWeapon.Magazine) {
-            Debug.Log("has amgazine -> settings");
 
             _magazineHand = Instantiate(_currentWeapon.Magazine, _leftHand, true);
             _magazineHand.SetActive(false);
@@ -102,10 +99,7 @@ public class WeaponAnimationEvents : MonoBehaviour {
                 break;
         }
     }
-    public void StopAllSounds() {
 
-        Debug.LogWarning("Stop all sounds! Do i neet it?");
-    }
 
     private void TriggerWeaponEvent(WeaponEvent weaponEvent) {
         switch (weaponEvent) {
