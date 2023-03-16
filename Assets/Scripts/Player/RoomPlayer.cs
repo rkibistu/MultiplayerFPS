@@ -119,8 +119,8 @@ public class RoomPlayer : NetworkBehaviour {
         var roomPlayer = Players.FirstOrDefault(x => x.Object.InputAuthority == p);
         if (roomPlayer != null) {
 
-            //if(roomPlayer.ActiveAgent)
-            //    runner.Despawn(roomPlayer.ActiveAgent.Object);
+            if(roomPlayer.ActiveAgent)
+                runner.Despawn(roomPlayer.ActiveAgent.Object);
 
             Players.Remove(roomPlayer);
             runner.Despawn(roomPlayer.Object);

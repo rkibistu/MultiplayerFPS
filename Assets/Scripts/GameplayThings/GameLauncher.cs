@@ -165,7 +165,7 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
 
         RoomPlayer.RemovePlayer(runner, player);
 
-        SetConnectionStatus(ConnectionStatus.Disconnected);
+        //SetConnectionStatus(ConnectionStatus);
     }
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) {
         Debug.Log($"OnShutdown {shutdownReason}");
