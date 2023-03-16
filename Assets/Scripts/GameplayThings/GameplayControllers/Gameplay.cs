@@ -176,6 +176,9 @@ public abstract class Gameplay : NetworkBehaviour {
 
         //play animation
         UIScreen.Focus(InterfaceManager.Instance.resultScreen);
+
+        //aici ne trebuie un if statement, sa stim pe care o bagam
+        InterfaceManager.Instance.resultScreen.GetComponent<GameResultScreenUI>().PlayVictoryAnimation();
     }
 
     // PRIVATE METHODS

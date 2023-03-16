@@ -233,7 +233,7 @@ public class PlayerInput : NetworkBehaviour, INetworkInput, IBeforeUpdate, IBefo
     // in functia OnInput se va seta cachedInput pentru a putea fi citita mai apoi de orice player apeland GetInput (asa se va popula fi fixedInput)
     private void ProcessStandaloneInput() {
 
-        if (Context.Instance.Gameplay.IsPlaying == false)
+        if (Context.Instance.Gameplay?.IsPlaying == false)
             return;
 
         Vector2 moveDirection = Vector2.zero;

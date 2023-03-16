@@ -1805,6 +1805,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1657384086264828652, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
+      propertyPath: m_Name
+      value: VictoryText
+      objectReference: {fileID: 0}
     - target: {fileID: 1774785100334951616, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1828,6 +1832,10 @@ PrefabInstance:
     - target: {fileID: 1871416282723933122, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -52.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197103433084016634, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4029991608418351344, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2121,6 +2129,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4468850462071644034, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4596006488598276965, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_Name
       value: WinnerText
@@ -2128,6 +2140,14 @@ PrefabInstance:
     - target: {fileID: 4645801441874141204, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184687326107617957, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
+      propertyPath: m_Name
+      value: Victory
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184687326107617957, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5194880843339501991, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_IsActive
@@ -2152,6 +2172,10 @@ PrefabInstance:
     - target: {fileID: 5537517543422189811, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -624.1918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258680562609345950, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
+      propertyPath: m_text
+      value: VICTORY
       objectReference: {fileID: 0}
     - target: {fileID: 6302184386904238634, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_Color.b
@@ -2183,7 +2207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6561355734795949881, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -16.64508
+      value: -16.64502
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561355734795949881, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -143.93604
       objectReference: {fileID: 0}
     - target: {fileID: 7228504607942713701, guid: fdb95d1c76f29e74699180de94c5297a, type: 3}
       propertyPath: m_RootOrder

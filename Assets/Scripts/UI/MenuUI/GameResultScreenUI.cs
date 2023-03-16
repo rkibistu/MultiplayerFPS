@@ -11,6 +11,18 @@ using UnityEngine;
 
 public class GameResultScreenUI : MonoBehaviour
 {
+    private Animator _animator;
+
+    private int _victoryAnim;
+    private int _lostAnim;
+
+    private void Awake() {
+
+        _animator = GetComponent<Animator>();
+        _victoryAnim = Animator.StringToHash("VictoryUI");
+        _lostAnim = Animator.StringToHash("LostUI");
+    }
+
     // called by aniamtion events, after victory/lose animation
     private void FocusToScoreScreen() {
 
@@ -18,5 +30,15 @@ public class GameResultScreenUI : MonoBehaviour
         InterfaceManager.Instance.scoreScreen.GetComponent<ScoreScreenUI>().SetBackToLobbyButtonActive();
 
         RoomPlayer.LocalRoomPlayer.Input.UnlockCursour();
+    }
+
+    public void PlayVictoryAnimation() {
+
+        _animator.Play(_victoryAnim);
+    }
+
+    public void PlayLostAniamtion() {
+
+        _animator.Play(_lostAnim);
     }
 }

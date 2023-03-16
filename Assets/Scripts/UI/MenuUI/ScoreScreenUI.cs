@@ -18,6 +18,7 @@ public class ScoreScreenUI : MonoBehaviour
     [SerializeField] private Button _backToLobbyButton;
 
     private GameObject _currentPlayerScoreItemPrefab;
+    
 
     private void Start() {
 
