@@ -119,10 +119,15 @@ public class RoomPlayer : NetworkBehaviour {
         var roomPlayer = Players.FirstOrDefault(x => x.Object.InputAuthority == p);
         if (roomPlayer != null) {
 
+            //if(roomPlayer.ActiveAgent)
+            //    runner.Despawn(roomPlayer.ActiveAgent.Object);
+
             Players.Remove(roomPlayer);
             runner.Despawn(roomPlayer.Object);
         }
     }
+
+    
 
     public void AssignAgent(AgentStateMachine agent) {
 
@@ -214,8 +219,13 @@ public class RoomPlayer : NetworkBehaviour {
         PlayerLeft?.Invoke(this);
         Players.Remove(this);
 
-
+     
        // ActiveAgent = null; 
+    }
+
+    private void OnApplicationQuit() {
+
+        
     }
 
     private static void OnStateChanged(Changed<RoomPlayer> changed) => PlayerChanged?.Invoke(changed.Behaviour);

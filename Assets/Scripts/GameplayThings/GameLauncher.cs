@@ -44,7 +44,8 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
     private FusionObjectPoolRoot _pool;
     private LevelManager _levelManager;
 
-    private readonly List<int> _acceptConnectsSceneIndexes = new List<int> { 0, 4 };
+    // lista scenele in care se pot conecta clienti la server
+    private readonly List<int> _acceptConnectsSceneIndexes = new List<int> { 0, 1, 2 };
 
     private void Start() {
         Application.runInBackground = true;
@@ -124,7 +125,7 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
     }
     public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) {
 
-
+        Debug.Log(runner.CurrentScene);
         if (_acceptConnectsSceneIndexes.Contains(runner.CurrentScene) || runner.CurrentScene == SceneRef.None) {
   
             request.Accept();
@@ -164,7 +165,7 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks {
 
         RoomPlayer.RemovePlayer(runner, player);
 
-        SetConnectionStatus(ConnectionStatus);
+        SetConnectionStatus(ConnectionStatus.Disconnected);
     }
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) {
         Debug.Log($"OnShutdown {shutdownReason}");

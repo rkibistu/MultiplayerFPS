@@ -52,6 +52,8 @@ public abstract class Gameplay : NetworkBehaviour {
         if (HasStateAuthority == false)
             return;
 
+        Debug.Log($"Player {player.Username} joined gameplay");
+
         AddToPlayerList(player);
         SubscribeTohealthEvents(player);
 
@@ -65,6 +67,7 @@ public abstract class Gameplay : NetworkBehaviour {
         if (HasStateAuthority == false)
             return;
 
+        Debug.Log($"Player {player.Username} left gameplay");
         RemoveFromPlayerList(player);
         UnsubscribeFromHealthEvents(player);
 

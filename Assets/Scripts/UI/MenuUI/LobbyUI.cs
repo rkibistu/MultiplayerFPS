@@ -50,6 +50,7 @@ public class LobbyUI : MonoBehaviour, IDisabledUI {
 
     private void OnEnable() {
 
+        RoomPlayer.LocalRoomPlayer?.Input.UnlockCursour();
 
         if (RoomPlayer.LocalRoomPlayer != null && RoomPlayer.LocalRoomPlayer.HasStateAuthority) {
 

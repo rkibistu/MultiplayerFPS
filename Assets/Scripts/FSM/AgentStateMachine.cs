@@ -122,6 +122,8 @@ public class AgentStateMachine : NetworkKCCProcessor, IBeforeAllTicks {
         AgentDespawned = null;
 
         _currentState.OnDespawned();
+
+        Debug.LogWarning("Agent despawned worked!");
     }
 
     /// <summary>

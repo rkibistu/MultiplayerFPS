@@ -59,7 +59,6 @@ public class AudioManager : MonoBehaviour {
     public static void Play(string clip, AudioMixerGroup mixerTarget, Vector3? position = null) {
         //play sound. Source of sound can pe specific using position of source
 
-        Debug.Log("Play " + clip);
         if (Instance.soundBank.TryGetAudio(clip, out AudioClip audioClip)) {
             GameObject clipObj = new GameObject(clip, typeof(AudioDestroyer));
             AudioSource src = clipObj.AddComponent<AudioSource>();

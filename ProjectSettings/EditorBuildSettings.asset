@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Yard.unity
     guid: a48fbb8c297216542ae4bcc3a80bd03f
   - enabled: 1
-    path: Assets/Scenes/CityLightTest.unity
+    path: Assets/Scenes/CityLight.unity
     guid: 2b788696ae659bb4ba6fd6951f82bf05
   m_configObjects: {}
