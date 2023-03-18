@@ -121,7 +121,7 @@ public abstract class Gameplay : NetworkBehaviour {
 
         //Find all spawn points
         _spawnPoints = GameObject.FindObjectsOfType<SpawnPoint>();
-        
+
 
         //Get timer and clear OnExpiredTime Action subscriptions
         _timer = GetComponent<GameTimer>();
@@ -132,7 +132,7 @@ public abstract class Gameplay : NetworkBehaviour {
         _activateUI.Activate();
 
         // Reset Player Score
-        foreach(var player in RoomPlayer.Players) {
+        foreach (var player in RoomPlayer.Players) {
 
             player.PlayerScore.ResetScore();
         }
@@ -160,9 +160,9 @@ public abstract class Gameplay : NetworkBehaviour {
     protected virtual void OnSpawned() {; }
 
     // spawn agent
-    protected virtual void OnPlayerJoin(RoomPlayer player) {;}
+    protected virtual void OnPlayerJoin(RoomPlayer player) {; }
     //despawn agent
-    protected virtual void OnPlayerLeft(RoomPlayer player) {;}
+    protected virtual void OnPlayerLeft(RoomPlayer player) {; }
 
     // setari pe agent dupa ce a fost spawnat (pozitia de start, vizibil/invisibil, arma, etc. )
     // acestea difera in functie de tipul de gameplay  (deathmatch, teams, etc.)
@@ -207,32 +207,20 @@ public abstract class Gameplay : NetworkBehaviour {
         UIScreen.Focus(InterfaceManager.Instance.resultScreen);
 
         //aici ne trebuie un if statement, sa stim pe care o bagam
-        InterfaceManager.Instance.resultScreen.GetComponent<GameResultScreenUI>().PlayVictoryAnimation();
-    }
 
-    private void DespawnGameplayAndGoToLobby() {
+        if (RoomPlayer.LocalRoomPlayer.HasMostKills()) {
 
-        if (!HasStateAuthority)
-            return;
-
-        GameManager.Instance.DespawnGameplayObjects();
-
-        // Seteaza starea jucatorilor to lobby deoarece acum ne vom muta in scena d elobby dintre runde
-        foreach (var player in RoomPlayer.Players) {
-
-            player.GameState = EGameState.Lobby;
+            InterfaceManager.Instance.resultScreen.GetComponent<GameResultScreenUI>().PlayVictoryAnimation();
         }
+        else {
 
-        LevelManager.LoadTrack(ResourceManager.Instance.AfterRoundMenuScene);
+            InterfaceManager.Instance.resultScreen.GetComponent<GameResultScreenUI>().PlayLostAniamtion();
+        }
     }
 
-    private IEnumerator GoBackToLobby_Coroutine() {
 
-        yield return new WaitForSeconds(_endScoreTableDuration);
-        DespawnGameplayAndGoToLobby();
-    }
 
-   
+
 
     // PRIVATE METHODS
 
@@ -284,6 +272,34 @@ public abstract class Gameplay : NetworkBehaviour {
         agent.Health.FatalHitTaken -= OnFatalHitTaken;
     }
 
- 
 
+    // next 2 methods are used to end the round
+    private void DespawnGameplayAndGoToLobby() {
+
+        if (!HasStateAuthority)
+            return;
+
+        GameManager.Instance.DespawnGameplayObjects();
+
+        // Seteaza starea jucatorilor to lobby deoarece acum ne vom muta in scena d elobby dintre runde
+        foreach (var player in RoomPlayer.Players) {
+
+            player.GameState = EGameState.Lobby;
+        }
+
+        LevelManager.LoadTrack(ResourceManager.Instance.AfterRoundMenuScene);
+    }
+
+    private IEnumerator GoBackToLobby_Coroutine() {
+
+        yield return new WaitForSeconds(_endScoreTableDuration);
+        DespawnGameplayAndGoToLobby();
+    }
+
+
+    // order
+    private void test() {
+
+        //ayers[0].ActiveAgent.
+    }
 }

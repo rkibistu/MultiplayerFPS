@@ -50,7 +50,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   _Players:
     _items: []
-  _roundDuration: 60
+  _roundDuration: 10
   _endScoreTableDuration: 3
   _reviveDelay: 3
 --- !u!114 &5711035792958713452

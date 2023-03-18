@@ -127,8 +127,6 @@ public class RoomPlayer : NetworkBehaviour {
         }
     }
 
-    
-
     public void AssignAgent(AgentStateMachine agent) {
 
         //Folosit in Gameplay cand se spawneaza agentul pentru a seta this.ActiveAgent
@@ -157,6 +155,23 @@ public class RoomPlayer : NetworkBehaviour {
         else {
             changed.Behaviour.ClearAgent();
         }
+    }
+
+
+    public bool HasMostKills() {
+
+        int maxKills = 0;
+
+        foreach(var player in Players) {
+
+            maxKills = (player.PlayerScore.Kills > maxKills) ? player.PlayerScore.Kills : maxKills;
+        }
+
+        if (PlayerScore.Kills == maxKills)
+            return true;
+
+        return false;
+        
     }
 
 
