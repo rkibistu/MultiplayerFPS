@@ -229,6 +229,30 @@ public class Weapons : NetworkBehaviour {
         agent.Weapons.AddWeapon(weapon.GetComponent<Weapon>());
     }
 
+    public bool CheckIfWeaponEquipped(GameObject weapon) {
+
+        //slot-ul specific unde va fi echipata arma
+        int identifier = weapon.GetComponent<WeaponIdentifier>()._weaponIdentifier;
+
+        //daca e gol slot-ul specifc acestei arme
+        if (_weapons[identifier] == null)
+            return false;
+
+        //displayname e unic fiecarei arme
+        if (_weapons[identifier].DisplayName == weapon.GetComponent<Weapon>().DisplayName) {
+
+            return true;
+        }
+
+        return false;
+    }
+
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    public void AddAmmo_RPC(int weaponidentifier, int ammoAmmount) {
+
+        _weapons[weaponidentifier].WeaponMagazine.AddAmmoToMagazine(ammoAmmount);
+    }
+
    
     // MONOBEHAVIOUR
 

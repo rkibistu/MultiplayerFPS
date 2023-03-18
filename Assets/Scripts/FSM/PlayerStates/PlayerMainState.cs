@@ -66,7 +66,7 @@ public abstract class PlayerMainState : BaseState {
         // Apply clamped look rotation delta
         _agentStateMachine.KCC.AddLookRotation(lookRotationDelta);
 
-    
+
         // Cast a ray. Check if hit pickubleItem. Pickup it
         TryPickupItem();
     }
@@ -246,8 +246,8 @@ public abstract class PlayerMainState : BaseState {
         instigator.PlayerScore.IncrementKills();
         target.PlayerScore.IncrementDeaths();
 
-        
-        _agentStateMachine._gameplaySceneController.AnnounceKill(hitData, _agentStateMachine.Weapons.CurrentWeapon.Icon );
+
+        _agentStateMachine._gameplaySceneController.AnnounceKill(hitData, _agentStateMachine.Weapons.CurrentWeapon.Icon);
 
         // PLAY Dead ANIMATION
         _agentStateMachine.Animator.Play(_agentStateMachine.Animator.DeathFlyingBack);
@@ -265,7 +265,19 @@ public abstract class PlayerMainState : BaseState {
                 EquipablePickable equipable = item.GetComponent<EquipablePickable>();
                 if (equipable) {
                     Debug.Log("Equip weapon. Call Rpc");
-                    _agentStateMachine.Weapons.AddWeapon_RPC(equipable.GetPrefabAndDestroy().GetComponent<WeaponIdentifier>()._weaponIdentifier);
+
+                    GameObject weaponToEquip = equipable.GetPrefabAndDestroy();
+                    bool alreadyEquipped = _agentStateMachine.Weapons.CheckIfWeaponEquipped(weaponToEquip);
+                    if (alreadyEquipped) {
+
+                        //add ammo
+                        _agentStateMachine.Weapons.AddAmmo_RPC(weaponToEquip.GetComponent<WeaponIdentifier>()._weaponIdentifier, 30);
+                    }
+                    else {
+                        // equip weapon
+                        _agentStateMachine.Weapons.AddWeapon_RPC(weaponToEquip.GetComponent<WeaponIdentifier>()._weaponIdentifier);
+                    }
+
                 }
 
                 ConsumablePickable consumable = item.GetComponent<ConsumablePickable>();

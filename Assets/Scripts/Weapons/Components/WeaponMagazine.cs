@@ -102,6 +102,13 @@ public class WeaponMagazine : WeaponComponent {
        
     }
 
+    public void AddAmmoToMagazine(int ammoAmount) {
+
+        Debug.Log("Add ammo: " + ammoAmount  + "Before: " + _weaponAmmo);
+        _weaponAmmo = Mathf.Clamp(_weaponAmmo + ammoAmount, 0, _maxWeaponAmmo);
+        Debug.Log( "After: " + _weaponAmmo);
+    }
+
     // NetworkBehaviour INTERFACE
 
     public override void Spawned() {
@@ -123,4 +130,5 @@ public class WeaponMagazine : WeaponComponent {
         }
         _weaponAnimation.PlayReloadAnimation();
     }
+
 }
