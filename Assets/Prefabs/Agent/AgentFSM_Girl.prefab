@@ -4112,6 +4112,7 @@ MonoBehaviour:
   _characterMeshToChange: {fileID: 6177894754659763000}
   _characterMesh: {fileID: -108576913577776861, guid: d0d54a54218f6d140b42800e49e3c83c, type: 3}
   _headlessCharacterMesh: {fileID: -108576913577776861, guid: e96fb2866f776a44e9e38b0ffeddd453, type: 3}
+  _test: {fileID: -7327338898555748978, guid: 34d21e49df6dcbb4aba0f59276b4c1d0, type: 3}
 --- !u!114 &7236272850068064296
 MonoBehaviour:
   m_ObjectHideFlags: 0

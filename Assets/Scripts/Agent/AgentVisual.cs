@@ -20,8 +20,10 @@ public class AgentVisual : MonoBehaviour
     [SerializeField]
     [Tooltip("Mesh used for local player")]
     private Mesh _headlessCharacterMesh;
-    
 
+
+
+    public Mesh _test;
 
 
     // PUBLIC METHODS
@@ -33,11 +35,10 @@ public class AgentVisual : MonoBehaviour
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.H)) {
-            SetVisibility(false);
+
+            _characterMeshToChange.sharedMesh = _test;
         }
-        if (Input.GetKeyDown(KeyCode.J)) {
-            SetVisibility(true);
-        }
+        
     }
 
 
